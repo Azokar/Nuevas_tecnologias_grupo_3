@@ -2,7 +2,7 @@ import pandas as pd
 
 
 
-# Limpieza específica del proyecto
+#  Limpieza específica del proyecto
 
 def limpieza_especifica(df):
     if 'correo' in df.columns:
@@ -29,3 +29,11 @@ def eliminar_duplicados(df, columna_unica):
     else:
         print(f"✅ No se encontraron duplicados en '{columna_unica}'.")
     return df
+
+
+#  Guardar datos procesados
+
+def guardar_datos(df, ruta_destino):
+    # index=False evita que se guarde la columna de números de fila
+    df.to_csv(ruta_destino, index=False)
+    print(f"💾 Datos limpios guardados en: {ruta_destino}")
