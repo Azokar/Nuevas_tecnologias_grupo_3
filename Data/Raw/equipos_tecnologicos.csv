@@ -1,0 +1,16 @@
+nom_equipo,marca,modelo,tipo_equipo,cantidad_total,cantidad_disponible,duracion_maxima_hrs,estado_equipo
+  LAPTOP DELL  ,Dell,Inspiron 15,LAPTOP,10,8,4.5,disponible
+MacBook Pro,,MacBook Pro 2021,Laptop,5,5,6.0,DISPONIBLE
+  tableta Samsung ,Samsung,Galaxy Tab A8,  tableta  ,8,,2.5,disponible
+Proyector Epson,EPSON,  EB-X41  ,proyector,3,1,,en mantenimiento
+laptop hp pavillion,Hp,HP Pavilion 15,Laptop,12,10,3.5,Disponible
+MOUSE LOGITECH,Logitech,,mouse,20,15,,,
+  Teclado Mecanico  ,redragon,K552,TECLADO,7,7,, disponible 
+Monitor LG,LG,27MK400H,monitor,,4,8.0,disponible
+Raspberry Pi,, Pi 4 Model B,minicomputador,6,6,12.0,DISPONIBLE
+impresora epson,Epson,L3150,Impresora,2,,, en reparacion
+camara web logitech,LOGITECH,C920,camara web,5,3,4.0,disponible
+  UPS APC  ,APC,Back-UPS 600,ups,4,4,,Disponible
+disco duro externo,WD,,disco externo,15,13,, disponible
+Audifonos Sony,sony,WH-1000XM4,audifonos,6,,3.0,disponible
+SWITCH DE RED,Cisco,SG110-16,switch,2,2,,DISPONIBLE
