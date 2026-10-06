@@ -1,0 +1,60 @@
+id_usuario,nombre_usuario,correo,codigo_estudiante,programa,semestre,telefono
+U001,  Santiago Jaramillo  ,santiago.jaramillo@cesde.edu.co,EST-2024-001,ingenieria de sistemas,4,3001234567
+U002,MARIA GARCIA,maria.garcia@GMAIL.COM,,Administracion de Empresas,2,
+U003,juan perez,juan.perez@cesde.edu.co,EST-2023-045,  Contaduria Publica  ,,3215556677
+U004,  Laura Gomez,lauragomez@correo.com,EST-2024-012,ingenieria de sistemas,6,3009876543
+U005,CARLOS RODRIGUEZ,  carlos.rodriguez@cesde.edu.co  ,EST-2022-089,Mercadeo,8,3124445566
+U006,andres torres,,EST-2024-033,INGENIERIA DE SISTEMAS,2,3007778899
+U007,  Diana Martinez  ,diana.m@cesde.edu.co,EST-2023-071,administracion de empresas,,
+U008,Felipe Rios,FELIPE.RIOS@GMAIL.COM,EST-2024-055,Contaduria Publica,1,3181112233
+U009,VALENTINA LOPEZ,valentina.lopez@cesde.edu.co,,ingenieria de sistemas,3,3056667788
+U010,camila vargas,camila.v@correo.com,EST-2023-028,  MERCADEO  ,5,
+U011,  Oscar Hernandez  ,oscar.h@cesde.edu.co,EST-2022-014,Ingenieria De Sistemas,10,3143334455
+U012,LUISA RAMIREZ,,EST-2024-067,administracion de empresas,2,3092223344
+U013,juan david castano,juancastano@correo.com,EST-2023-091,CONTADURIA PUBLICA,,3171234567
+U014,  PAULA MORENO  ,paula.moreno@cesde.edu.co,EST-2024-003,ingenieria de sistemas,4,
+U015,sergio salazar,sergio.s@gmail.com,,Mercadeo,7,3088889900
+U016,Isabella Londono,isabella.londono@cesde.edu.co,EST-2025-016,DISENO GRAFICO,2,3071192750
+U017,Luciana Echeverri,LUCIANA.ECHEVERRI@GMAIL.COM,EST-2022-017,Ingenieria de Sistemas,8,
+U018,  CRISTIAN CASTRO ,cristian.castro@gmail.com,EST-2025-018,  DISENO GRAFICO ,8,3094766902
+U019,ricardo zapata,ricardo.zapata@cesde.edu.co,EST-2022-019,Mercadeo,9,3149420478
+U020,melissa suarez,  melissa.suarez@correo.com ,EST-2025-020,mercadeo,8,3161564049
+U021,Alejandro Betancur,alejandro.betancur@cesde.edu.co,EST-2023-021,Mercadeo,8,3063455491
+U022,Mateo Cardona,mateo.cardona@cesde.edu.co,EST-2023-022,  Diseno Grafico  ,6,3199254204
+U023,  Samuel Henao  ,samuel.henao@cesde.edu.co,EST-2023-023,  DISENO GRAFICO ,3,3061237093
+U024,David Cardona,david.cardona@cesde.edu.co,EST-2022-024,Contaduria Publica,2,
+U025,Tomas Giraldo,tomas.giraldo@correo.com,,ADMINISTRACION DE EMPRESAS,4,3203166605
+U026,  NICOLAS FRANCO ,  nicolas.franco@cesde.edu.co ,EST-2025-026,  CONTADURIA PUBLICA ,7,3059712997
+U027,Isabella Franco,isabella.franco@gmail.com,EST-2025-027,Mercadeo,3,3126900575
+U028,Julian Henao,  julian.henao@cesde.edu.co ,EST-2024-028,  Diseno Grafico  ,7,3206976939
+U029,MARIANA PATINO,mariana.patino@cesde.edu.co,EST-2024-029,  Ingenieria de Sistemas  ,,
+U030,Luciana Henao,luciana.henao@gmail.com,EST-2022-030,Contaduria Publica,7,3059409777
+U031,Tatiana Velasquez,tatiana.velasquez@correo.com,EST-2022-031,CONTADURIA PUBLICA,7,
+U032,sofia mejia,sofia.mejia@cesde.edu.co,,  DISENO GRAFICO ,4,
+U033,Mateo Uribe,,EST-2025-033,CONTADURIA PUBLICA,,3246716215
+U034,jorge londono,jorge.londono@cesde.edu.co,EST-2023-034,Mercadeo,4,3154371874
+U035,Esteban Patino,esteban.patino@correo.com,EST-2023-035,MERCADEO,9,3022412764
+U036,SARA VELASQUEZ,sara.velasquez@cesde.edu.co,EST-2024-036,mercadeo,,3266597046
+U037,Natalia Zapata,NATALIA.ZAPATA@CESDE.EDU.CO,EST-2023-037,Ingenieria de Sistemas,7,
+U038,Alejandro Henao,  alejandro.henao@cesde.edu.co ,EST-2022-038,ingenieria de sistemas,10,3016474258
+U039,VERONICA CARDONA,veronica.cardona@correo.com,EST-2022-039,Administracion de Empresas,8,3112158212
+U040,Daniel Echeverri,daniel.echeverri@gmail.com,EST-2024-040,mercadeo,8,3256873777
+U041,Melissa Jimenez,MELISSA.JIMENEZ@CORREO.COM,EST-2024-041,  CONTADURIA PUBLICA ,9,3053406940
+U042,Isabella Velasquez,isabella.velasquez@gmail.com,EST-2024-042,  CONTADURIA PUBLICA ,9,
+U043,David Arango,david.arango@cesde.edu.co,EST-2025-043,Mercadeo,,3015507101
+U044,Jorge Giraldo,jorge.giraldo@correo.com,EST-2023-044,Ingenieria de Sistemas,4,3093865173
+U045,Daniel Jimenez,daniel.jimenez@correo.com,EST-2024-045,ingenieria de sistemas,8,3156828616
+U046,,manuela.velasquez@correo.com,EST-2022-046,  CONTADURIA PUBLICA ,5,3266101407
+U047,Sofia Agudelo,sofia.agudelo@cesde.edu.co,EST-2024-047,  Diseno Grafico  ,6,3083925067
+U048,Veronica Franco,,EST-2023-048,Diseno Grafico,4,3173293628
+U049,ricardo londono,ricardo.londono@gmail.com,EST-2023-049,Administracion de Empresas,,3205703780
+U050,Ricardo Arango,ricardo.arango@cesde.edu.co,EST-2023-050,Administracion de Empresas,10,3206044039
+U051,Juliana Henao,juliana.henao@cesde.edu.co,EST-2022-051,  Ingenieria de Sistemas  ,1,3018094080
+U052,nicolas arango,  nicolas.arango@cesde.edu.co ,EST-2025-052,Contaduria Publica,8,
+U053,Kevin Giraldo,KEVIN.GIRALDO@CESDE.EDU.CO,EST-2023-053,,3,3245817017
+U054,David Restrepo,david.restrepo@correo.com,,Administracion de Empresas,8,3291809251
+U055,ALEJANDRO VELASQUEZ,alejandro.velasquez@cesde.edu.co,EST-2022-055,Ingenieria de Sistemas,2,3298666583
+U001,SANTIAGO JARAMILLO, SANTIAGO.JARAMILLO@CESDE.EDU.CO ,EST-2024-001,ingenieria de sistemas,4,3001234567
+U005,CARLOS RODRIGUEZ, CARLOS.RODRIGUEZ@CESDE.EDU.CO ,EST-2022-089,Mercadeo,8,3124445566
+U021,ALEJANDRO BETANCUR, ALEJANDRO.BETANCUR@CESDE.EDU.CO ,EST-2023-021,Mercadeo,8,3063455491
+U034,JORGE LONDONO, JORGE.LONDONO@CESDE.EDU.CO ,EST-2023-034,Mercadeo,4,3154371874

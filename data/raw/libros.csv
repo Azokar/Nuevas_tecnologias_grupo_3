@@ -1,0 +1,56 @@
+id_libro,nom_libro,autor,editorial,isbn,cantidad_total,cantidad_disponible,dias_prestamo_max,ubicacion_piso,ubicacion_seccion,ubicacion_estante
+L001,  Clean Code  ,Robert C. Martin,Prentice Hall,978-0132350884,5,3,14,2,A, 3
+L002,El Arte De La Guerra,Sun Tzu,,978-8497645355,3,,7,1,B,1
+L003,Introduccion a los Algoritmos,THOMAS H. CORMEN,  MIT Press  ,978-0262046305,4,4,14,3,C,2
+L004,harry potter y la piedra filosofal,,Bloomsbury,978-0439708180,6,5,7,1,A,
+L005,Design Patterns,Erich Gamma,Addison Wesley,,2,1,14,2,B,4
+L006,  el senor de los anillos  ,j.r.r. tolkien,Allen & Unwin,978-0261102354,4,,14,1,C,1
+L007,PYTHON CRASH COURSE,Eric Matthes,No Starch Press,978-1593279288,,5,10,3,A,2
+L008,Sapiens,yuval noah harari,Debate,978-8499924212,5,5,,2,B,
+L009,El Principito,Antoine de Saint-Exupery,,978-0156012195,8,7,7,1,A,3
+L010,FUNDAMENTOS DE BASES DE DATOS,Abraham Silberschatz,McGraw Hill,978-0073523323,3,3,14,,C,1
+L011,arquitectura limpia,Robert C. Martin,Prentice Hall,978-0134494166,4,2,14,3,A,
+L012,100 anos de soledad,Gabriel Garcia Marquez,  sudamericana  ,978-9584200877,3,,21,1,B,2
+L013,  Inteligencia Artificial  ,Stuart Russell,Pearson,978-0134610993,2,2,21,3,C,3
+L014,el hobbit,J.R.R. Tolkien,George Allen & Unwin,,5,4,7,1,A,1
+L015,Matematicas Discretas,kenneth rosen,McGraw Hill,978-0073383095,4,,14,2,,2
+L016,  El Amor en los Tiempos del Colera  ,GABRIEL GARCIA MARQUEZ,,,2,2,21,2,B,2
+L017,Cronica de una Muerte Anunciada,  Gabriel Garcia Marquez  ,Sudamericana,978-1400034710,9,9,21,,A,1
+L018,  El Coronel no Tiene Quien le Escriba  ,  GABRIEL GARCIA MARQUEZ ,Sudamericana,978-0307475442,4,,21,1,C,4
+L019,Don Quijote de la Mancha,MIGUEL DE CERVANTES,alfaguara,978-8420412146,3,1,,3,C,4
+L020,  RAYUELA ,Julio Cortazar,Alfaguara,978-8420437484,2,2,21,2,C,
+L021,Ficciones,jorge luis borges,Debate,978-8499089508,,1,14,1,A,1
+L022,la ciudad y los perros,Mario Vargas Llosa,  Alfaguara  ,978-8420412337,4,0,21,1,C,2
+L023,Pedro Paramo,  Juan Rulfo  ,Debate,978-8493442606,9,7,14,2,B,1
+L024,1984,George Orwell,Debate,978-8499890944,5,0,14,3,B,2
+L025,Rebelion en la Granja,George Orwell,,978-8499890951,4,,7,1,,
+L026,UN MUNDO FELIZ,Aldous Huxley,  DEBATE ,978-8497594257,7,6,14,1,,2
+L027,Fahrenheit 451,Ray Bradbury,Debate,978-8499894317,6,,14,3,C,4
+L028,The Pragmatic Programmer,Andrew Hunt,addison wesley,978-0135957059,7,2,14,2,C,1
+L029,Refactoring,Martin Fowler,Addison Wesley,978-0134757599,7,4,14,3,B,
+L030,  Code Complete  ,Steve McConnell,Pearson,978-0735619678,8,,14,2,B,2
+L031,THE CLEAN CODER,Robert C. Martin,  PRENTICE HALL ,978-0137081073,5,,14,2,A,3
+L032,Estructuras de Datos en Python,MICHAEL GOODRICH,  PEARSON ,978-1118290279,9,,14,1,C,4
+L033,  REDES DE COMPUTADORAS ,ANDREW TANENBAUM,  PEARSON ,978-0132126953,,1,,3,A,3
+L034,Sistemas Operativos Modernos,Andrew Tanenbaum,  PEARSON ,978-0133591620,2,0,14,3,B,3
+L035,Ingenieria del Software,  Ian Sommerville  ,  Pearson  ,978-0133943030,4,3,14,2,B,
+L036,Python para Analisis de Datos,  Wes McKinney  ,No Starch Press,978-1491957660,5,4,10,1,B,4
+L037,  Automate the Boring Stuff  ,  Al Sweigart  ,,978-1593279929,,0,10,3,A,4
+L038,Eloquent JavaScript,Marijn Haverbeke,,978-1593279509,6,6,10,1,C,1
+L039,Deep Learning,IAN GOODFELLOW,,978-0262035613,3,,14,3,B,3
+L040,ESTRUCTURA E INTERPRETACION DE PROGRAMAS,harold abelson,MIT Press,978-0262510875,9,1,14,2,C,1
+L041,Calculo de una Variable,  James Stewart  ,McGraw Hill,978-6074817836,3,,14,2,B,1
+L042,ALGEBRA LINEAL,stanley grossman,  McGraw Hill  ,978-6071507600,2,2,14,1,A,1
+L043,estadistica aplicada,Mario Triola,Pearson,978-6073243773,9,4,14,1,B,2
+L044,Fisica Universitaria,  Hugh Young  ,Pearson,978-6073221245,9,3,14,3,A,3
+L045,Contabilidad Financiera,  GERARDO GUAJARDO ,mcgraw hill,,2,,14,1,C,3
+L046,  PRINCIPIOS DE ECONOMIA ,Gregory Mankiw,  McGraw Hill  ,978-6074819434,5,4,14,2,A,1
+L047,Fundamentos de Marketing,philip kotler,Pearson,978-6073217224,2,0,14,1,B,4
+L048,  DIRECCION DE MARKETING ,  PHILIP KOTLER ,Pearson,978-6073237000,2,0,14,2,C,1
+L049,Administracion,Stephen Robbins,Pearson,978-6073227674,7,3,14,2,A,
+L050,padre rico padre pobre,Robert Kiyosaki,Debate,978-6073135801,4,2,7,2,B,1
+L051,Habitos Atomicos,JAMES CLEAR,DEBATE,978-8418118036,8,5,7,3,C,2
+L052,Homo Deus,YUVAL NOAH HARARI,  Debate  ,978-8499926711,6,4,14,,,1
+L053,Breve Historia del Tiempo,,Debate,978-8498928273,2,0,14,1,,
+L054,  COSMOS ,CARL SAGAN,Bloomsbury,,2,1,14,1,A,
+L055,harry potter y la camara secreta,J.K. ROWLING,  BLOOMSBURY ,978-0439064873,6,2,7,3,A,2
