@@ -62,3 +62,10 @@ def eliminar_duplicados(df, columna_unica):
         print(f"✅ No se encontraron duplicados en '{columna_unica}'.")
     return df
 
+# -------------------------------------------------------
+# 6. Guardar datos procesados
+# -------------------------------------------------------
+def guardar_datos(df, ruta_destino):
+    # index=False evita que se guarde la columna de números de fila
+    df.to_csv(ruta_destino, index=False)
+    print(f"💾 Datos limpios guardados en: {ruta_destino}")
