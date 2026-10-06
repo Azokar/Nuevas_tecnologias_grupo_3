@@ -1,0 +1,53 @@
+nom_equipo,marca,modelo,tipo_equipo,cantidad_total,cantidad_disponible,duracion_maxima_hrs,estado_equipo
+  LAPTOP DELL  ,Dell,Inspiron 15,LAPTOP,10,8,4.5,disponible
+MacBook Pro,,MacBook Pro 2021,Laptop,5,5,6.0,DISPONIBLE
+  tableta Samsung ,Samsung,Galaxy Tab A8,  tableta  ,8,,2.5,disponible
+Proyector Epson,EPSON,  EB-X41  ,proyector,3,1,,en mantenimiento
+laptop hp pavillion,Hp,HP Pavilion 15,Laptop,12,10,3.5,Disponible
+MOUSE LOGITECH,Logitech,,mouse,20,15,,
+  Teclado Mecanico  ,redragon,K552,TECLADO,7,7,, disponible 
+Monitor LG,LG,27MK400H,monitor,,4,8.0,disponible
+Raspberry Pi,, Pi 4 Model B,minicomputador,6,6,12.0,DISPONIBLE
+impresora epson,Epson,L3150,Impresora,2,,, en reparacion
+camara web logitech,LOGITECH,C920,camara web,5,3,4.0,disponible
+  UPS APC  ,APC,Back-UPS 600,ups,4,4,,Disponible
+disco duro externo,WD,,disco externo,15,13,, disponible
+Audifonos Sony,sony,WH-1000XM4,audifonos,6,,3.0,disponible
+SWITCH DE RED,Cisco,SG110-16,switch,2,2,,DISPONIBLE
+Laptop Lenovo,lenovo,ThinkPad E14,LAPTOP,3,3,2.5,PRESTADO
+LAPTOP ASUS,Asus,VivoBook 15,  LAPTOP ,8,8,2.5,prestado
+Laptop Acer,Acer,Aspire 5,  Laptop  ,,12,2.5,  DISPONIBLE 
+  Laptop HP  ,HP,ProBook 440,  Laptop  ,18,5,2.5,disponible
+Laptop Dell,Dell,Latitude 3420,laptop,7,4,,disponible
+Tableta Apple,,,Tableta,16,16,6.0,DISPONIBLE
+TABLETA LENOVO,lenovo,Tab M10,Tableta,19,13,2.5,en mantenimiento
+Tableta Huawei,,MatePad T10,  TABLETA ,6,,6.0,
+  PROYECTOR BENQ ,BenQ,MS560,Proyector,6,1,3.0,
+Proyector ViewSonic,ViewSonic,PA503S,Proyector,,3,8.0,disponible
+PROYECTOR EPSON,  Epson  ,PowerLite E20,  Proyector  ,17,1,6.0,EN REPARACION
+MONITOR SAMSUNG,SAMSUNG,S24R350,  Monitor  ,8,0,,disponible
+Monitor Dell,Dell,P2422H,Monitor,10,2,6.0,disponible
+Monitor AOC,AOC,24B2XH,  MONITOR ,6,6,12.0,  en mantenimiento  
+mouse genius,  GENIUS ,DX-110,Mouse,13,12,3.0,disponible
+  MOUSE HP ,,X500,Mouse,17,7,4.0,  disponible  
+Mouse Microsoft,,Basic Optical,Mouse,13,8,12.0,  PRESTADO 
+Teclado Logitech,Logitech,K120,  Teclado  ,2,0,,disponible
+Teclado Genius,Genius,,  TECLADO ,6,3,,
+Teclado HP,,K1500,Teclado,9,5,8.0,DISPONIBLE
+Camara Web Microsoft,Microsoft,,Camara Web,18,5,12.0,disponible
+Camara Web Genius,Genius,FaceCam 1000X,Camara Web,,3,,  DISPONIBLE 
+  AUDIFONOS JBL ,jbl,Tune 510,Audifonos,10,7,2.0,disponible
+  AUDIFONOS LOGITECH ,Logitech,H390,AUDIFONOS,11,3,2.5,disponible
+Audifonos Genius,GENIUS,HS-200C,Audifonos,7,4,,disponible
+disco externo seagate,  Seagate  ,Expansion 1TB,disco externo,13,7,2.5,DISPONIBLE
+DISCO EXTERNO TOSHIBA,  Toshiba  ,Canvio 2TB,  DISCO EXTERNO ,10,10,3.0,  disponible  
+  Impresora HP  ,HP,LaserJet M111,Impresora,12,12,2.0,disponible
+Impresora Canon,Canon,Pixma G3110,Impresora,16,,,disponible
+Minicomputador Arduino,Arduino,Uno R3,MINICOMPUTADOR,12,7,,
+MINICOMPUTADOR RASPBERRY,Raspberry,Pi 5,Minicomputador,7,0,6.0,disponible
+Switch TP-Link,  TP-LINK ,TL-SG108,Switch,17,3,3.0,  DISPONIBLE 
+  Switch D-Link  ,D-Link,DGS-1008A,  Switch  ,18,4,2.5,disponible
+Router TP-Link,TP-Link,,ROUTER,18,15,2.0,  DISPONIBLE 
+Router Cisco,Cisco,RV160,Router,19,2,2.5,  EN MANTENIMIENTO 
+Microfono Blue,Blue,Snowball,Microfono,8,4,12.0,disponible
+Microfono Fifine,,K669B,  Microfono  ,9,,,prestado

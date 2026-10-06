@@ -1,2 +1,19 @@
 # Created by venv; see https://docs.python.org/3/library/venv.html
 .venv/
+venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Datos generados por analisis.py
+data/processed/
+
+# Archivos del editor y del sistema
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Enunciado del trabajo
+Momento 2.docx
