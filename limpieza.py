@@ -47,3 +47,25 @@ def limpieza_especifica(df):
     print("✅ Limpieza específica aplicada (correos, isbns, estados).")
     return df
 
+# -------------------------------------------------------
+# 5. Eliminar duplicados
+# -------------------------------------------------------
+def eliminar_duplicados(df, columna_unica):
+    antes = len(df)
+    # drop_duplicates elimina filas que tengan el mismo valor en 'columna_unica'
+    df = df.drop_duplicates(subset=[columna_unica])
+    despues = len(df)
+
+    if antes != despues:
+        print(f"✅ Se eliminaron {antes - despues} duplicados basados en '{columna_unica}'.")
+    else:
+        print(f"✅ No se encontraron duplicados en '{columna_unica}'.")
+    return df
+
+# -------------------------------------------------------
+# 6. Guardar datos procesados
+# -------------------------------------------------------
+def guardar_datos(df, ruta_destino):
+    # index=False evita que se guarde la columna de números de fila
+    df.to_csv(ruta_destino, index=False)
+    print(f"💾 Datos limpios guardados en: {ruta_destino}")
