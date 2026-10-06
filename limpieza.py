@@ -21,3 +21,29 @@ def manejar_nulos(df, columnas_clave):
     print(f"\n🗑️  Filas con nulos en columnas clave eliminadas. Restantes: {len(df)}")
     return df
 
+# -------------------------------------------------------
+# 3. Estandarizar texto
+# -------------------------------------------------------
+def estandarizar_texto(df, columnas_texto):
+    for col in columnas_texto:
+        if col in df.columns:
+            # strip() quita espacios al inicio y al final
+            # lower() convierte todo a minúsculas
+            df[col] = df[col].astype(str).str.strip().str.lower()
+    print(f"✅ Texto estandarizado en: {columnas_texto}")
+    return df
+
+# -------------------------------------------------------
+# 4. Limpieza específica del proyecto
+# -------------------------------------------------------
+def limpieza_especifica(df):
+    if 'correo' in df.columns:
+        df['correo'] = df['correo'].astype(str).str.strip().str.lower()
+    if 'isbn' in df.columns:
+        # Elimina los guiones del ISBN, ej: 978-0132350884 → 9780132350884
+        df['isbn'] = df['isbn'].astype(str).str.replace('-', '', regex=False)
+    if 'estado_equipo' in df.columns:
+        df['estado_equipo'] = df['estado_equipo'].astype(str).str.strip().str.lower()
+    print("✅ Limpieza específica aplicada (correos, isbns, estados).")
+    return df
+
