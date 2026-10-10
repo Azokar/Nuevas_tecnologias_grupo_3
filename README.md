@@ -7,7 +7,7 @@ Proyecto del Grupo 3 de Nuevas Tecnologías (Momento 2).
 ## Estructura del proyecto
 
 ```
-├── analisis.py          # Script principal: limpia, combina y responde las preguntas
+├── analisis.py          # Script principal: menú, limpieza, merge y preguntas de análisis
 ├── limpieza.py          # Módulo con las funciones de limpieza
 ├── requirements.txt     # Dependencias del proyecto
 ├── data/
@@ -16,9 +16,16 @@ Proyecto del Grupo 3 de Nuevas Tecnologías (Momento 2).
 │   │   ├── libros.csv
 │   │   ├── prestamos.csv
 │   │   └── equipos_tecnologicos.csv
-│   └── processed/       # Datos limpios, generados al ejecutar analisis.py
+│   └── processed/       # Datos limpios, generados por la opción "Limpieza"
+│       ├── usuarios_limpio.csv
+│       ├── libros_limpio.csv
+│       ├── equipos_limpio.csv
+│       ├── prestamos_limpio.csv
+│       └── prestamos_completo.csv
 └── README.md
 ```
+
+La carpeta `data/processed/` no está en el repositorio (está en `.gitignore`): se crea sola al ejecutar la limpieza.
 
 ## Datos
 
@@ -30,6 +37,18 @@ Proyecto del Grupo 3 de Nuevas Tecnologías (Momento 2).
 | `equipos_tecnologicos.csv` | 52 | Inventario de equipos | |
 
 Los datos crudos traen problemas a propósito: valores nulos, registros duplicados, mayúsculas y minúsculas mezcladas, espacios extra e ISBN con guiones.
+
+### Archivos generados en `data/processed/`
+
+| Archivo | Registros | Contenido |
+|---|---|---|
+| `usuarios_limpio.csv` | 50 | Usuarios sin nulos en los campos clave y sin correos repetidos |
+| `libros_limpio.csv` | 55 | Libros con texto estandarizado e ISBN sin guiones |
+| `equipos_limpio.csv` | 52 | Equipos con texto y estado normalizados |
+| `prestamos_limpio.csv` | 120 | Préstamos sin nulos en los campos clave y sin `id_prestamo` repetidos |
+| `prestamos_completo.csv` | 112 | Cada préstamo unido con los datos de su usuario y de su libro |
+
+`prestamos_completo.csv` tiene menos registros que `prestamos_limpio.csv` porque el `merge` solo conserva los préstamos cuyo usuario y libro siguen existiendo después de la limpieza.
 
 ## Configuración del entorno
 
@@ -67,6 +86,8 @@ Se necesita Python 3.10 o superior (el menú usa `match/case`).
    pip install -r requirements.txt
    ```
 
+   Las librerías que usa el código son **pandas** (carga, limpieza y análisis de los datos) y **colorama** (colores en la consola). El resto de `requirements.txt` son dependencias de pandas.
+
 ## Ejecución
 
 Con el entorno virtual activado y desde la carpeta raíz del proyecto:
@@ -75,31 +96,48 @@ Con el entorno virtual activado y desde la carpeta raíz del proyecto:
 python analisis.py
 ```
 
-El script abre un menú principal. Las opciones se usan en orden:
+El script abre un menú principal en la consola (el texto sale en color magenta gracias a `colorama`). Las opciones se usan en orden:
 
-1. **Cargar archivos:** carga los CSV de `data/raw/` en DataFrames.
-2. **Limpieza:** limpia cada tabla, combina (`merge`) los préstamos con sus usuarios y sus libros, y guarda el resultado en `data/processed/`.
+1. **Cargar archivos:** carga los cuatro CSV de `data/raw/` en DataFrames y muestra las filas y columnas de cada uno.
+2. **Limpieza:** limpia cada tabla, combina (`merge`) los préstamos con sus usuarios y sus libros, y guarda los resultados en `data/processed/`.
 3. **Análisis:** abre un submenú con una opción por cada pregunta de análisis. La `0` vuelve al menú principal.
-4. **Salir.**
+4. **Salir:** cierra el programa y devuelve la consola a su color normal.
+
+El menú valida el orden: si se elige **Limpieza** sin haber cargado los archivos, o **Análisis** sin haber limpiado, el programa avisa qué paso falta. Si se vuelven a cargar los archivos, hay que repetir la limpieza antes de analizar.
+
+### Qué se limpia en cada tabla
+
+| Tabla | Filas eliminadas si falta | Nulos rellenados | Texto estandarizado | Otros pasos |
+|---|---|---|---|---|
+| Usuarios | `id_usuario`, `nombre_usuario` o `correo` | `programa` → `sin programa` | `nombre_usuario`, `programa` | Normaliza `correo` y elimina duplicados por `correo` |
+| Libros | `id_libro` o `nom_libro` | `autor` → `desconocido`, `editorial` → `sin editorial`, `cantidad_disponible` → `0` | `nom_libro`, `autor`, `editorial` | Quita los guiones del `isbn` y convierte `cantidad_disponible` a entero |
+| Equipos | `nom_equipo` | `marca` → `sin marca`, `estado_equipo` → `sin estado`, `cantidad_disponible` → `0` | `nom_equipo`, `marca`, `tipo_equipo`, `estado_equipo` | Convierte `cantidad_disponible` a entero |
+| Préstamos | `id_usuario` o `id_libro` | `estado_prestamo` → `sin estado`, `dias_prestamo` → mediana de la columna | `estado_prestamo` | Elimina duplicados por `id_prestamo` |
+
+Al final, los préstamos limpios se unen con los usuarios (por `id_usuario`) y con los libros (por `id_libro`) en un solo DataFrame, que es el que usan las preguntas de análisis.
 
 ## Módulo de limpieza (`limpieza.py`)
 
 | Función | Qué hace |
 |---|---|
-| `cargar_datos(ruta)` | Carga un CSV en un DataFrame |
-| `manejar_nulos(df, columnas_clave, valores_relleno)` | Elimina las filas con nulos en las columnas clave y rellena los demás nulos |
-| `estandarizar_texto(df, columnas_texto)` | Pasa el texto a minúsculas y quita los espacios extra |
-| `limpieza_especifica(df)` | Normaliza correos, quita los guiones del ISBN y normaliza el estado de los equipos |
-| `eliminar_duplicados(df, columna_unica)` | Elimina los registros repetidos |
-| `guardar_datos(df, ruta_destino)` | Guarda el DataFrame limpio en un CSV |
+| `cargar_datos(ruta)` | Carga un CSV en un DataFrame y muestra cuántas filas y columnas tiene |
+| `manejar_nulos(df, columnas_clave, valores_relleno=None)` | Muestra los nulos por columna, elimina las filas con nulos en las columnas clave y rellena los demás con los valores indicados |
+| `estandarizar_texto(df, columnas_texto)` | Pasa el texto a minúsculas y quita los espacios al inicio y al final |
+| `limpieza_especifica(df)` | Normaliza `correo`, quita los guiones de `isbn` y normaliza `estado_equipo` (solo en las columnas que existan en la tabla) |
+| `eliminar_duplicados(df, columna_unica)` | Elimina las filas con el mismo valor en la columna indicada e informa cuántas quitó |
+| `guardar_datos(df, ruta_destino)` | Guarda el DataFrame en un CSV y crea la carpeta de destino si no existe |
+
+Cada función imprime en la consola lo que hizo, para poder seguir el proceso paso a paso.
 
 ## Preguntas de análisis
 
-| Tipo | Pregunta |
-|---|---|
-| Frecuencia | ¿Cuál es el libro con la mayor cantidad de préstamos? |
-| Agregación | ¿Cuál es el promedio de días de préstamo por editorial? |
-| Filtrado y conteo | ¿Cuántos préstamos están en estado "retrasado"? |
+| Opción | Tipo | Pregunta | Cómo se responde |
+|---|---|---|---|
+| 1 | Frecuencia | ¿Cuál es el libro con la mayor cantidad de préstamos? | `value_counts()` sobre `nom_libro`; muestra el primero y los 5 más prestados |
+| 2 | Agregación | ¿Cuál es el promedio de días de préstamo por editorial? | `groupby("editorial")` y promedio de `dias_prestamo` |
+| 3 | Filtrado y conteo | ¿Cuántos préstamos están en estado "retrasado"? | Filtro por `estado_prestamo`; muestra el total y la lista con usuario, libro y días |
+
+Con los datos actuales, el libro más prestado es *Harry Potter y la piedra filosofal* (10 préstamos) y hay 16 préstamos retrasados.
 
 ## Conceptos clave
 
