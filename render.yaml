@@ -1,0 +1,18 @@
+# Blueprint de Render para el microservicio de analítica (Python).
+services:
+  - type: web
+    name: nexou-analitica
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn servicio:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: NEXOU_API_URL
+        sync: false          # URL de la API en Render, ej: https://nexou-api.onrender.com
+      - key: CORS_ORIGENES
+        sync: false          # URL de Vercel, ej: https://nexou.vercel.app
+      - key: APP_TIMEZONE
+        value: America/Bogota
