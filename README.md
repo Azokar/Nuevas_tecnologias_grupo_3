@@ -147,3 +147,39 @@ Con los datos actuales, el libro más prestado es *Harry Potter y la piedra filo
 ## Flujo de trabajo en Git
 
 El repositorio sigue Git Flow: `main` tiene las versiones estables, `develop` es la base de trabajo, cada cambio se hace en una rama `feature/` que se fusiona en `develop` con un Pull Request, y las entregas se preparan en ramas `release/` (por ejemplo, `release/analisis-v1`).
+
+
+## Microservicio de analítica (`servicio.py`)
+
+Además del script de consola, el proyecto incluye un microservicio **FastAPI** que calcula con pandas las estadísticas de
+préstamos y las entrega listas para dibujar. No tiene base de datos: cada petición reenvía el token del administrador a la API
+de Java, descarga las reservas y el inventario, aplica los filtros y devuelve las métricas. El navegador dibuja las gráficas
+(interactivas) con esos datos. Si el token no es de un ADMIN, la API responde 403 y el servicio también.
+
+```bash
+pip install -r requirements.txt
+NEXOU_API_URL=http://localhost:8080 uvicorn servicio:app --reload --port 8000
+```
+
+En PowerShell: `$env:NEXOU_API_URL="http://localhost:8080"; uvicorn servicio:app --reload --port 8000`
+
+| Endpoint | Descripción |
+|---|---|
+| `GET /health` | Estado del servicio |
+| `GET /analitica` | Todas las métricas en una respuesta, con filtros (requiere token ADMIN) |
+
+Filtros (parámetros de `/analitica`, todos opcionales): `desde`, `hasta` (AAAA-MM-DD, sobre la fecha del préstamo), `tipo`
+(`Libro` o `Equipo`), `semestre` (`1`-`12` o `sin-dato`), `programa`, `categoria`, `estado` (`ACTIVA`, `DEVUELTO`, `VENCIDO`,
+`CANCELADA` o `TARDIO`) y `granularidad` (`dia`, `semana` o `mes`, para la serie en el tiempo).
+
+La respuesta incluye: `resumen` (total, activos, con retraso, % tardío, retraso y duración promedio, personas), `hallazgos`
+(frases listas: artículo más alquilado, el más devuelto con retraso, semestre que más alquila…), `ranking_articulos`,
+`retrasos_por_articulo`, `por_semestre`, `por_programa`, `por_categoria`, `dia_semana`, `usuarios_retrasos`, `estados`,
+`puntualidad`, `serie_tiempo`, `sin_movimiento` y `filtros_disponibles` (valores para llenar los selectores).
+
+**Cómo se mide un retraso:** un libro es tardío si se devolvió después del día límite; un equipo, si se devolvió después de su
+`horaFin`. Una reserva activa cuyo límite ya pasó cuenta como retraso (“en mora”). Las devoluciones de equipos anteriores a
+esta versión no guardan fecha real y no se evalúan.
+
+Variables: `NEXOU_API_URL` (URL de la API), `CORS_ORIGENES` (URL del frontend, separadas por coma) y `APP_TIMEZONE`
+(por defecto `America/Bogota`). Documentación interactiva en `/docs`. Despliegue en Render con `render.yaml`.
